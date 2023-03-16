@@ -4,12 +4,13 @@
   box-sizing: border-box;
 }
 
-body {
-  @font-face {
-    font-family: "Quicksand";
-    src: url("/Users/marsacolombo/Documents/Coding Aymeric/Projet Perso/Auto Web Page/Assets/Tpo/Quicksand (1)/Quicksand-VariableFont_wght.ttf");
-  }
+@font-face {
   font-family: "Quicksand";
+  src: url("/Assets/Tpo/Quicksand\ \(1\)/static/Quicksand-Medium.ttf");
+}
+
+body {
+  font-family: "Quicksand", serif;
   font-size: 16px;
   line-height: 1.5;
   background-color: #f7f7f7;
