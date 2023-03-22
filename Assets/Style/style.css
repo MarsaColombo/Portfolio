@@ -30,7 +30,7 @@ header {
   color: #fff;
 }
 
-h1 {
+header h1 {
   font-size: 5rem;
   margin-bottom: 80px;
 }
@@ -70,20 +70,24 @@ nav ul li a:hover {
 
 /* About section and Div styles */
 .header-title {
-  justify-content: center;
-  text-align: center;
-  align-items: center;
+  background: linear-gradient(#595cff, #c6f8ff);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  width: 100%;
-  background-color: white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .content {
+  background-position: center;
+  background-size: cover;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   text-align: center;
   align-items: center;
@@ -92,9 +96,8 @@ nav ul li a:hover {
 #passions,
 #career {
   background: linear-gradient(#595cff, #c6f8ff);
-  background-size: cover;
+
   background-attachment: fixed;
-  background-position: center;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -102,7 +105,11 @@ nav ul li a:hover {
   align-items: center;
   text-align: center;
 }
-
+main p {
+  font-size: 1rem;
+  margin: 50px;
+  width: 60ch;
+}
 ul {
   list-style: none;
 }
@@ -120,16 +127,23 @@ li a:hover {
   text-decoration: underline;
 }
 
+footer {
+  background-color: white;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
 /* Contact section styles */
 #contact {
-  background-color: black;
+  background: linear-gradient(to bottom, #9bafd9, #103783);
   color: #fff;
   padding: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-radius: 5px 50px;
+  border-radius: 50px;
 }
 
 #contact h2 {
@@ -154,12 +168,14 @@ label {
 }
 
 input[type="text"],
+input[type="password"],
 input[type="email"],
-input[type="tel"] textarea {
+input[type="tel"],
+textarea {
   width: 70%;
   padding: 10px;
-  border-radius: 5px;
-  border: none;
+  border-radius: 10px;
+  border: thick 1px #fff;
   margin-bottom: 20px;
 }
 
@@ -167,7 +183,7 @@ textarea {
   height: 150px;
 }
 
-button[type="submit"] {
+input[type="submit"] {
   background-color: #fff;
   color: #333;
   padding: 10px 20px;
@@ -176,15 +192,21 @@ button[type="submit"] {
   cursor: pointer;
 }
 
-button[type="submit"]:hover {
+input[type="submit"]:hover {
   background-color: #333;
   color: #fff;
 }
+/*
+Put this in the input section to make the input box red when invalid with the JavaScript instrqctions
+  input:valid {
+    border: 1px solid #333;
+    background-color: #333;
+    color: #fff;
+  }
+  input:invalid {
+    border: ; 1px solid #DC143C	;
+    background-color: #333;
+    color: #fff;
+  }*/
 
 /* Footer styles */
-footer {
-  background-color: #33333343;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
