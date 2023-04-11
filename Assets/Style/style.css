@@ -3,24 +3,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-@font-face {
-  font-family: "Quicksand";
-  src: url("/Assets/Tpo/Quicksand\ \(1\)/static/Quicksand-Medium.ttf");
+  z-index: 1;
 }
 
 body {
-  font-family: "Quicksand", serif;
+  font-family: "Playfair Display", sans-serif;
   line-height: 1.5;
 }
 
 /* Header styles */
 header {
-  background: linear-gradient(#595cff, #c6f8ff);
-  background-size: cover;
+  background-image: url("/Assets/Images/Image\ Header.jpg");
   background-attachment: fixed;
-  background-position: center;
+  background-position: center center;
+  background-size: cover;
+
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -28,6 +25,20 @@ header {
   align-items: center;
   text-align: center;
   color: #fff;
+}
+/*Optional*/
+header:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("/Assets/Images/Image Header.jpg");
+  background-position: center center;
+  background-size: cover;
+  transform: translateZ(-0, 1rem) scale(1.1);
 }
 
 header h1 {
@@ -35,108 +46,96 @@ header h1 {
   margin-bottom: 80px;
 }
 
+/* Navigation styles */
 nav {
   margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav ul {
   list-style: none;
   display: flex;
+  gap: 30px;
+  padding: 0 30px;
 }
 
-nav ul li {
-  margin-left: 20px;
-}
-
-nav ul li:first-child {
-  margin-left: 0;
-}
-
-nav ul li a {
-  color: #fff;
+nav a {
   text-decoration: none;
-  margin: 0 -0.25rem;
-  padding: 0 0.55rem;
-  box-shadow: inset 0 0 0 0;
+  color: white;
+  align-items: center;
   transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-nav ul li a:hover {
-  text-decoration: underline;
-  box-shadow: inset 100px 0 0 0 rgba(0, 76, 255, 0.555);
+nav a:link,
+nav a:visited {
   color: white;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  box-shadow: inset 400px 0 0 0 white;
+  color: #708090;
   border-radius: 15px;
 }
 
-/* About section and Div styles */
-.header-title {
-  background: linear-gradient(#595cff, #c6f8ff);
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  height: 100%;
+/* About Main, section and Div styles */
+main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.content {
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-  text-align: center;
-  align-items: center;
-}
-#story,
-#passions,
-#career {
-  background: linear-gradient(#595cff, #c6f8ff);
-
-  background-attachment: fixed;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 main p {
   font-size: 1rem;
-  margin: 50px;
-  width: 60ch;
-}
-ul {
-  list-style: none;
 }
 
-li {
-  margin-bottom: 40px;
-}
-
-li a {
-  color: #333;
-  text-decoration: none;
-}
-
-li a:hover {
-  text-decoration: underline;
-}
-
-footer {
+.header-title {
   background-color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-title h2 {
+  padding: 10px;
+  border: solid 1px black;
+  border-radius: 50px;
+}
+.story {
+  background-image: url("/Assets/Images/Image1.jpg");
+}
+
+.passions {
+  background-image: url("/Assets/Images/Imge2.jpg");
+}
+
+.career {
+  background-image: url("/Assets/Images/Image3.jpg");
+}
+.content {
   color: #fff;
-  padding: 20px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+/* About footer styles */
+footer {
+  background-color: rgb(1, 6, 11);
+  color: #fff;
+
   text-align: center;
 }
 
 /* Contact section styles */
 #contact {
-  background: linear-gradient(to bottom, #9bafd9, #103783);
+  background: linear-gradient(to bottom, #669bbc, #003049, #fdf0d5);
   color: #fff;
   padding: 100px;
   display: flex;
